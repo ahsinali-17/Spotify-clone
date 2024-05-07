@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 25vw;
+  padding: 10px;
+  height: 100vh;
+}
+.left .home{
+  min-height: 20vh;
+}
+.left .home .logo{
+ justify-content: space-between;
+}
+.left .home .logo .logoimg{
+cursor: pointer;
+width: 125px;
+}
+.left .home .logo #cross{
+display: none;
+cursor: pointer;
+}
+.home ul li {
+  width: 25px;
+  gap: 20px;
+  display: flex;
+  list-style: none;
+  padding-top: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.heading {
+  gap: 20px;
+  display: flex;
+  width: 100%;
+}
+.songList ul {
+  padding: 5px 10px;
+  height: 55vh;
+  margin: 10px 0;
+  overflow-y: scroll;
+}
+.songList ul li {
+  width: 100%;
+  list-style-type: decimal-leading-zero;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border: 1px solid white;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.songList ul li img {
+  width: 20%;
+}
+.songinfo {
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  font-size: 12px;
+}
+.playnow {
+  gap: 5px;
+  width: 40%;
+}
+.playnow span {
+  font-weight: 700;
+  font-size: 12px;
+}
+.heading img {
+  width: 30px;
+}
+.heading h2 {
+  width: 300px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.lib {
+  position: relative;
+  min-height: 69vh;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  gap: 15px;
+  position: relative;
+  min-height: 10vh;
+}
+.footer a {
+  color: gray;
+  text-decoration: none;
+  width: 70px;
+  cursor: pointer;
+}
+.right {
+  width: 75vw;
+  margin: 15px 0;
+  height: 100vh;
+  position: relative;
+}
+.header {
+  background-color: rgb(0, 0, 0);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 1;
+}
+.header > * {
+  padding: 20px;
+}
+.header .navbar #ham{
+ display: none;
+ cursor: pointer;
+}
+.header .navbar svg {
+  width: 60px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons .signup {
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: black;
+  color: gray;
+  font-weight: 700;
+  font-size: 18px;
+  border-color: transparent;
+  cursor: pointer;
+  
+}
+.signup:hover {
+  color: white;
+  transform: scale(1.05);
+  font-size: 20px;
+}
+.buttons .login {
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  border-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 18px;
+}
+.login:hover {
+  background-color: rgb(193, 192, 192);
+  transform: scale(1.05);
+  font-size: 20px;
+}
+
+.s-playlist {
+  padding: 15px;
+  position: relative;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  width: 250px;
+  min-height: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  margin-top: 20px;
+  position: relative;
+}
+.card > h2,
+p {
+  padding-top: 5px;
+}
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.play {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: rgb(56, 225, 56);
+  position: absolute;
+  bottom: 80px;
+  right: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.card:hover {
+  background-color: rgb(56, 55, 55);
+  box-shadow: 0 0 2px 5px black;
+}
+.card:hover .play {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.playbar {
+  position: fixed;
+  min-height: 60px;
+  bottom: 20px;
+  background-color: rgb(56, 225, 56, 0.85);
+  width: 73vw;
+  padding: 10px;
+  border-radius: 35px;
+}
+.upperbar{
+  min-height: 40px;
+  padding: 0 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.cursonginfo{
+  width: 30%;
+}
+.voltime{
+  gap:30px;
+  justify-content: center;
+  width: 30%;
+}
+.playbuttons {
+  display: flex;
+  gap: 15px;
+  width: 40%;
+  cursor: pointer;
+}
+
+.volseek{
+  width: 100px;
+  display: block;
+  border-radius: 25px;
+  background-color: white;
+  height: 3px;
+  cursor: pointer;
+  position: relative;
+}
+.volume{
+  gap:5px;
+  cursor: pointer;
+}
+.volcircle{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -6px;
+  left: 100%;
+  border-radius: 50%;
+  background-color: rgb(251, 251, 251);
+}
+.seekbar {
+  width: 70vw;
+  position: absolute;
+  bottom: 8px;
+  left: 2%;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: transparent;
+  height: 6px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -7px;
+  left: 0%;
+  border-radius: 50%;
+  background-color: rgb(251, 251, 251);
+}
+
+@media only screen and (max-width: 1100px){
+  .left{
+    position: absolute;
+    left:-100%;
+    z-index: 3;
+    width: 75vw;
+  }
+  .right{
+    width: 100vw;
+  }
+  .header .navbar svg {
+    width: 30px;
+  }
+  .header .navbar #ham{
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+  .left .home .logo #cross{
+    display: block;
+  }
+  .playbar{
+    width: 96vw;
+    margin-left: 10px;
+    min-height: 100px;
+  }
+  .upperbar{
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+  }
+  .cursonginfo{
+    width: 100%;
+    font-size: 14px;
+    padding: 3px;
+    justify-content: center;
+  }
+  .playbuttons{
+    width: 100%;
+    justify-content: center;
+  }
+  .voltime{
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+  }
+  .seekbar{
+    width: 92vw;
+    left:2%
+  }
+  .volume{
+    cursor: pointer;
+  }
+  .songtime{
+    font-size: 10px;
+  }
+  .volseek{
+    width:50px;
+    display: block;
+}
+}
