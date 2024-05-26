@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="spotify-login.css" />
+    <title>Login - Spotify</title>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html"><img src="img/logo.svg" alt="logo" class="logo" /></a>
+    </nav>
+    <div class="main">
+        <div class="container">
+            <img src="img/logo.svg" alt="logo" class="logo1" />
+            <h1>Log in to Spotify</h1>
+            <ul>
+                <li>
+                    <a href="https://www.google.com/"><button class="btns"><img src="img/google.svg" alt="google"><span
+                                class="google">Continue with
+                                Google</span></button></a>
+                </li>
+                <li>
+                    <a href="https://web.facebook.com/"><button class="btns"><img src="img/facebook.svg"
+                                alt="facebook"><span class="facebook">Continue with
+                                Facebook</span></button></a>
+                </li>
+                <li>
+                    <a
+                        href="https://appleid.apple.com/auth/authorize?response_type=code&response_mode=form_post&client_id=com.spotify.accounts&state=AQAcN8h5BhGBPS4g3EO%2FQ9pL3SPv6kWy0dEGCIlzCtRAI59hoZxemThH%2BN6d0f0PKyd9M%2BO02cAmMimx8MW7NZheVEzNQej%2BADbaqduU9181cL%2F5H26EcdWJCeafM%2BKmb55jr7mozKfumc1Fc%2BJuzZ9r7wwh4dx2JpffWZXwCD9%2F4mxI0tKy8slQnBxzmcfhkPWenjy7s998ZewGDxqIRLIUxeaFSbinyjN6LhInk5h9Q13CH8OFjZmtQgQ9EgKzCq3SqHiCOoBeG2MSUvw%2F3f5SP4p%2FBpkL6ML%2FA9KqV%2BNoBTEdOQrzrEgYmK9x9FV%2Bo%2BFkcEX8ALasfcfNt8DU3x60achL1Q%3D%3D&scope=name+email&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect"><button
+                            class="btns"><img src="img/apple.svg" alt="apple"><span class="apple">Continue with
+                                Apple</span></button></a>
+                </li>
+                </li>
+            </ul>
+            <hr class="line">
+            <div class="inputs">
+                <label for="email or username">
+                    <span class="label">Email or Username</span>
+                </label>
+                <input class="box" type="text" name="email or username" id="email" placeholder="Email or Username">
+            </div>
+
+            <div class="inputs">
+                <label for="password">
+                    <span class="label">Password</span>
+                </label>
+                <div class="pass">
+                    <input class="box" type="password" name="password" id="password" placeholder="Password">
+                    <div id="eye-icon-box"><img src="img/eye-slash-svgrepo-com.svg" alt="hide" id="eye-icon"
+                            onclick="pass()"></div>
+                </div>
+
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="check" name="remember" class="remember" checked="">
+                    <label for="check" class="toggle" onclick="toggle_btn()">
+                    <div class="dot"></div>
+
+                </label>
+                <p>Remember Me</p>
+            </div>
+
+            <div class="btn">
+                <button class="login">Log In</button>
+            </div>
+
+            <div class="reset">
+                <a href="#">
+                    <p>Forget Your Password?</p>
+                </a>
+            </div>
+
+            <hr class="line line1">
+
+            <div class="signup">
+                <span class="grey-text">Don't have an account?</span>
+                <a href="#"><span class="text-white">Sign up for Spotify</span></a>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer">
+            <p class="privacy">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms">Terms of service</a> apply.
+            </p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

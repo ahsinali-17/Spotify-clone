@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: #121212;
+}
+
+nav {
+  background: #121212;
+  padding: 2rem 3rem;
+  width: 100vw;
+}
+
+.main {
+  padding: 2rem;
+  background: #1b1b1b;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #121212;
+  width: 770px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0rem;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+  margin: 0.5rem;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 5rem;
+  background: #121212;
+  outline: solid 1px grey;
+  border: 0;
+  height: 48px;
+  width: 324px;
+  padding: 1rem 0rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border 500ms ease;
+}
+.btns:focus {
+  border: 2px solid white;
+}
+.btns:hover {
+  border: 2px solid white;
+}
+
+li a {
+  text-decoration: none;
+}
+button img {
+  margin: 0rem 2rem;
+}
+
+h1 {
+  margin: 3rem 0rem;
+  font-weight: 700;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+}
+.logo {
+  width: 117px;
+  height: 36px;
+  filter: invert(1);
+}
+.logo1 {
+  display: none;
+}
+.line {
+  margin: 32px 100px;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: initial;
+  border-top: 1px solid rgb(41, 41, 41);
+  width: 534px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 16px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+}
+label {
+  padding: 0px 0px 8px;
+}
+.box {
+  width: 324px;
+  height: 48px;
+  padding: 8px 14px;
+  background: #121212;
+  outline: 0;
+  border: solid 1px grey;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+input::placeholder {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+}
+input:hover {
+  border: 2px solid white;
+}
+#password {
+  height: auto;
+}
+
+.remember {
+  border: 0;
+}
+.toggle-button {
+  width: 30px;
+  height: 16px;
+  background: #727272;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.btn {
+  padding: 32px 0px;
+}
+.login {
+  width: 324px;
+  height: 48px;
+  padding: 8px 32px;
+  border-radius: 5rem;
+  font-size: 16px;
+  font-weight: 700;
+  background: #1ed760;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: 500ms width ,500ms height;
+}
+.login:hover {
+  width: 330px;
+  height: 50px;
+}
+a {
+  color: white;
+  font-size: 16px;
+  transition: 500ms color;
+}
+a:focus {
+  text-decoration: none;
+  color: #1ed760;
+  p {
+    border-bottom: solid 2px #1ed760;
+  }
+  .text-white {
+    border-bottom: solid 2px #1ed760;
+  }
+}
+a:hover {
+  color: #1ed760;
+}
+.grey-text {
+  color: #a7a7a7;
+  font-size: 16px;
+}
+.text-white {
+  margin: 0px 0px 0px 8px;
+}
+.pass {
+  display: flex;
+  width: 324px;
+  height: 3rem;
+  background: #121212;
+  outline: none;
+  border: solid 1px grey;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  transition: 500ms border;
+}
+.pass input {
+  border: 0;
+  outline: none;
+  height: auto;
+}
+.pass:hover {
+  border: solid 2px white;
+}
+
+.pass img {
+  padding: 10px;
+  cursor: pointer;
+  width: 48px;
+  opacity: 0.6;
+  transition: 1000ms opacity;
+}
+
+.pass img:hover {
+  opacity: 1;
+}
+.pass:focus {
+  border: 2px solid white;
+}
+.dot {
+  background: #121212;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 32px;
+  height: 16px;
+  background: #727272;
+  border-radius: 5rem;
+  position: absolute;
+  transition: 500ms background;
+}
+label.toggle.active {
+  background: #1ed760;
+}
+label.toggle.active .dot {
+  left: 18px;
+}
+
+.checkbox {
+  display: flex;
+  width: 324px;
+  align-items: center;
+}
+.checkbox p {
+  padding-left: 48px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+#check {
+  display: none;
+}
+.signup {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+footer {
+  height: 78px;
+  width: 100%;
+  padding: 2rem;
+  color: rgb(167, 167, 167);
+  background: #121212;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;}
+
+.footer a {
+  color: rgb(167, 167, 167);
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0;
+    width: 100%;
+  }
+  nav {
+    padding-left: 2rem;
+    padding-top: 4rem;
+  }
+  .logo {
+    width: 4.7rem;
+    height: 1.5rem;
+  }
+  .line {
+    width: 90vw;
+  }
+  .container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+  .inputs {
+    width: 90vw;
+  }
+  .pass {
+    width: 90vw;
+  }
+  .box {
+    width: 90vw;
+  }
+  .btns {
+    width: 90vw;
+  }
+  .checkbox {
+    width: 90vw;
+  }
+  .btn {
+    width: 90vw;
+  }
+  .login {
+    width: 90vw;
+  }
+  h1 {
+    display: flex;
+    align-items: flex-start;
+    width: 90vw;
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .line1 {
+    display: none;
+  }
+  .signup {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+    margin: 1rem;
+    justify-content: space-between;
+  }
+ footer{
+  max-width: fit-content;
+ }
+  footer p {
+    text-align: center;
+  }
+}
