@@ -114,7 +114,7 @@ cursor: pointer;
 .right {
   width: 75vw;
   margin: 15px 0;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .header {
@@ -178,8 +178,8 @@ cursor: pointer;
 .s-playlist {
   padding: 15px;
   position: relative;
-  max-height: 65vh;
-  overflow-y: auto;
+  margin-bottom: 45px;
+  overflow-y: none;
 }
 .card-container {
   display: flex;

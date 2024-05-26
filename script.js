@@ -4,7 +4,7 @@
  //fetching songs in the form of html table from client side
 async function getSongs(folder) {
   curFolder = folder;
-    let data = await fetch(`https://ahsinali-17.github.io/Spotify-clone/${folder}/`);
+    let data = await fetch(`http://127.0.0.1:5500/${folder}/`);
     let info = await data.text();
     let div = document.createElement("div");
     div.innerHTML = info;
@@ -38,7 +38,7 @@ async function getSongs(folder) {
     }
 
     //adding event listener to play songs from list on click
-    Array.from(songList.getElementsByTagName("li")).forEach((element) => {
+    Array.from(songList.getElementsByTagName("li")).forEach((element) => { 
       let curSong = element.querySelector(".songinfo").firstElementChild.innerHTML.trim();
       //console.log(curSong)
       element.addEventListener("click", () => {
@@ -83,7 +83,7 @@ function secondsToMinutesAndSeconds(seconds) {
 
 async function displayAlbums() {
   console.log("displaying albums")
-  let a = await fetch(`https://ahsinali-17.github.io/Spotify-clone/songs/`)
+  let a = await fetch(`http://127.0.0.1:5500/songs/`)
   let response = await a.text();
   let div = document.createElement("div")
   div.innerHTML = response;
@@ -95,7 +95,7 @@ async function displayAlbums() {
     let folder = e.href.split('/').slice(-1)[0]
     let cardContainer = document.querySelector(".card-container")
     //get metadata of folders
-    let a = await fetch(`https://ahsinali-17.github.io/Spotify-clone/songs/${folder}/info.json`)
+    let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`)
     let response = await a.json();
     cardContainer.innerHTML = cardContainer.innerHTML + `<div class="card">
     <img src="/songs/${folder}/image.jpg" alt="card image">
